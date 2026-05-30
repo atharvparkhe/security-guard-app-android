@@ -1,17 +1,55 @@
-# Android/Gradle
+# Android / Gradle
+# https://github.com/github/gitignore/blob/main/Android.gitignore
+
+# Gradle
 .gradle/
 local.properties
-captures/
-*.keystore
-*.jks
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
 
 # Build outputs
 build/
+*/build/
 app/build/
+.externalNativeBuild/
+.cxx/
+captures/
 
-# IDE
+# APK / AAB
+*.apk
+*.ap_
+*.aab
+
+# Signing (never commit secrets)
+*.jks
+*.keystore
+!debug.keystore
+signing.properties
+
+# Android Studio / IntelliJ
 .idea/
 *.iml
+*.ipr
+*.iws
+.navigation/
+output.json
+
+# NDK
+obj/
+
+# Profiling
+*.hprof
+
+# Lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
 
 # OS
 .DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
